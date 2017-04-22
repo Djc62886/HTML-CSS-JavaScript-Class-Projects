@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>Guess the Color</title>
+
+</head>
+
+<body onload="do_game()">
+
+<script>
+
+var target;
+var guess_input;
+var finished = false;
+var count = 0;
+var colors = ["blue" , "green" , "orange" , "red" , "purple" , "silver" , "white" , "yellow"];
+
+function do_game(){
+	var random_number = Math.floor(Math.random() * colors.length);
+	colors.sort();
+	target = colors[random_number];		
+	
+	
+	while(!finished){	
+		
+		guess_input = prompt("Which one of these colors am I thinking of? \n\n " + "blue, green, orange, red, purple, silver, white, yellow\n\n" + "Choose one to see if you match mine.");							
+		count += 1;
+		finished = check_guess();
+	}
+}
+
+function check_guess(){
+	
+	if(colors.indexOf(guess_input) == -1)   
+	{
+			return false;
+	}
+	if(guess_input > target) 
+	{
+			return false;
+	}
+	if(guess_input < target) 
+	{
+			return false;
+	}
+	document.body.style.backgroundColor = target;	
+	return true;	
+}
+
+		</script>
+	</body>
+</html>

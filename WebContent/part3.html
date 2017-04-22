@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<style type="text/css">
+
+fieldset {
+background: lightyellow;
+width: 720px; 
+border: 10px solid yellow; 
+margin-bottom: 10px; 
+
+}
+
+label {
+width: 180px; 
+display: inline-block; 
+text-align: right, top; 
+
+}
+
+textarea {
+width: 360px; 
+height: 50px; 
+
+}
+
+label.gender {
+ width: auto; 
+ text-align: left; 
+ float:right; 
+ position: absolute; 
+ 
+}
+label.getInTouch{
+ width: auto; 
+ }
+ 
+ input.range {
+ text-align: center; 
+ 	}
+
+legend {
+font-weight: bold; 
+}
+
+label:hover {
+font-size: 30px; 
+}
+input:hover {
+font-size: 30px; 
+
+ }
+
+
+</style>
+
+
+<title>Registration Form</title>
+</head>
+<body>
+
+<h1>Welcome to DateMe! Please Enter Your Information Below</h1>
+
+<form name="enroll" action="https://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php" method="post" enctype="multipart/form-data" class="form-horizontal">
+
+<!---------------------------FIELDSET 1-------------------------------------------------->
+<fieldset> 
+
+<legend>Your Face</legend>
+
+<label for="uploadpic">Please Upload Your Photo:</label>
+<input type="file" id="uploadpic" name="uploadpic" required><br>
+
+<label for="preview">Photo Preview:<img src="https://www.cse.ust.hk/~rossiter/dating_web_site.js" alt="Your Photo"/> </label>
+<input type="image" id="https://www.cse.ust.hk/~rossiter/dating_web_site.js" name="preview" required><br>
+</fieldset>
+ <!--------------------------FIELDSET 2 ------------------------------------------------>
+<fieldset>
+
+<legend>Your General Details</legend>
+
+<label for="fullName">Name: </label>
+ <input type="text" id="fullName" name="fullName" placeholder="First and Last Name" required><br>
+
+<label for="gender">Gender:</label>
+ <input type="radio" name="gender" id="gender" value="male" required>Male
+ <input type="radio" name="gender" id="gender" value="female" required>Female<br>
+ 
+ <label for="age">Age: </label>
+ <input type="number" name="age" placeholder="Must Be 18 or Older" min=18 required><br>
+ 
+ <label for="birthdate">Date of Birth: </label>
+ <input type="date" id="birthdate" placeholder="MM/DD/YYYY" required><br>
+ 
+ <label for="color">Favorite Color: </label> 
+ <input type="color" id="color" name="favcolor"><br>
+ 
+ <label for="country">Country: </label>
+ <select id="country" name="country">
+							<option value="United States">United States</option>
+							<option value="Canada">Canada</option>
+							<option value="United Kingdom">United Kingdom</option>
+							<option value="Australia">Australia</option>
+							<option value="New Zealand">New Zealand</option>
+							<option value="Other">Other</option>
+</select> <br>
+</fieldset>
+<!-- ------------------------------------FIELDSET 3------------------------------------ -->
+<fieldset>
+
+<legend>Your Indicators</legend>
+
+<label for="height">Height:  </label>Short
+<input type="range" id="height" min="0" max="100" name="height" > Tall<br>
+<label for="salary">Salary:  </label> Poor
+<input type="range" id="salary" min="0" max="100" name="salary"> Rich
+
+</fieldset>
+<!-- --------------------------------------FIELDSET 4---------------------------------------- -->
+<fieldset>
+
+<legend>Your Contact Information</legend>
+
+<label for="email">Email: </label>
+<input type="email" id="email" name="email" required><br> 
+
+<label for="tel">Telephone Number: </label>
+<input type="tel" id="tel" name="telephone" placeholder="123-456-7890"><br>
+
+<label for="address">Address: </label>
+<textarea rows="4" cols="50" id="address" name="address">
+
+</textarea><br>
+
+<label for="getInTouch">Preferred Method of Contact: </label>
+<input type="checkbox" id="getInTouch" name="email">Email
+<input type="checkbox" id="getInTouch" name="phone">Phone
+<input type="checkbox" id="getInTouch" name="facebook/twitter">Facebook or Twitter
+
+</fieldset>
+
+<button type="reset" id="reset" value="Reset" name="Reset">Reset Form</button>
+<button type="submit" id="submit" value="Submit" name="Submit">Submit Form</button>
+
+</form>
+
+<!-- ---------------------------------END OF FORM--------------------------------------------- -->
+
+<script src="https://www.cse.ust.hk/~rossiter/dating_web_site.js"></script>
+</body>
+</html>
